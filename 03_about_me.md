@@ -1,7 +1,7 @@
 # About Me
 
 **Name:** Mark Jason L. Patron  
-**Course/Year:** BS Information Technology 3rd Year -B  
+**Course/Year:** BS Information Technology 3rd Year
 **Fun Fact:** I enjoy watching others play horror games because I'm afraid to play it myself.  
 
 ---
