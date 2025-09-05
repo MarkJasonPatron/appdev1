@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Activity</title>
+  <style>
+    body {
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="changeBackground()">Change Background</button>
+  <p id="colorDisplay"></p>
+  <p id="delayedMessage"></p>
+
+  <script>
+    function changeBackground() {
+      const color = prompt("What is your favorite color?");
+      document.body.style.backgroundColor = color;
+      document.getElementById("colorDisplay").textContent = `Your favorite color is ${color}`;
+    }
+
+    setTimeout(() => {
+      document.getElementById("delayedMessage").textContent = "This message appears after 2 seconds";
+    }, 2000);
+  </script>
+</body>
+</html>
