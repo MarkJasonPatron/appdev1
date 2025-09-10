@@ -1,0 +1,1 @@
+I realized here that in using merge the history stays comlete and non-linear while in rebase it becomes linear and clean.
