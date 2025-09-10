@@ -1,0 +1,1 @@
+I realized here that in macro commit the history is messy and it hides the context while in micro commit the history is clear so its good for collaboration and it's more maintainable.
