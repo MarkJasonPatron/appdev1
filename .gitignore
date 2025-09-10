@@ -1,9 +1,4 @@
-# Ignore demo folders
-14_git_merge_demo/
-14_git_rebase_demo/
-14_git_reset_demo/
-14_git_revert_demo/
-14_macro_vs_micro_commits_demo/
+# Ignore files/folders
 
 # Node.js dependencies (if you use React or JS projects)
 node_modules/
