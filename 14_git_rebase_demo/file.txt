@@ -1,0 +1,1 @@
+I realized here that rebasing makes your history more cleaner and sequential.
