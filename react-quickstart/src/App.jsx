@@ -5,7 +5,7 @@ import './App.css'
 
 function MyButton() {
   return (
-    <button>I'm a button</button>
+    <button>This is a button</button>
   );
 }
 
@@ -27,14 +27,15 @@ function AboutPage() {
   );
 }
 
-
-
 function App() {
 
   return (
     <>
       <ButtonAndGreetings></ButtonAndGreetings>
       <AboutPage></AboutPage>
+      <img
+          className="avatar"
+      />
     </>
   )
 }
