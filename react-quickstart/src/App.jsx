@@ -29,12 +29,22 @@ function AboutPage() {
 
 function App() {
 
+  const user = {
+    name: "Rick Astley",
+    imageUrl: "https://i.insider.com/602ee9ced3ad27001837f2ac?width=200",
+  };
+
   return (
     <>
       <ButtonAndGreetings></ButtonAndGreetings>
       <AboutPage></AboutPage>
+      <h2>
+        {user.name}
+      </h2>
       <img
           className="avatar"
+          src={user.imageUrl}
+          alt="image"
       />
     </>
   )
