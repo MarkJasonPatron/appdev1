@@ -27,12 +27,29 @@ function AboutPage() {
   );
 }
 
+function AdminPanel() {
+  return "This is the Admin Panel"
+}
+
+function LoginForm() {
+  return "This is the Login Form"
+}
+
 function App() {
 
   const user = {
     name: "Rick Astley",
     imageUrl: "https://i.insider.com/602ee9ced3ad27001837f2ac?width=200",
   };
+
+  const isLoggedIn = true;
+
+  let content;
+  if (isLoggedIn) {
+    content = <AdminPanel />;
+  } else {
+    content = <LoginForm />;
+  }
 
   return (
     <>
@@ -46,6 +63,8 @@ function App() {
           src={user.imageUrl}
           alt="image"
       />
+      <br></br>
+      {content}
     </>
   )
 }
