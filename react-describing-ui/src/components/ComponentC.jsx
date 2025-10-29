@@ -1,12 +1,11 @@
-import ComponentD from './ComponentD';
+RootModule.js
+import { greetA } from './ModuleA.js';
+import { greetB } from './ModuleB.js';
+import { greetC } from './ModuleC.js';
 
-function ComponentC() {
-  return (
-    <div>
-      <h2>Component C</h2>
-      <ComponentD />
-    </div>
-  );
+export function rootGreet() {
+  console.log('Hello from RootModule');
+  greetA();
+  greetB();
+  greetC();
 }
-
-export default ComponentC;
