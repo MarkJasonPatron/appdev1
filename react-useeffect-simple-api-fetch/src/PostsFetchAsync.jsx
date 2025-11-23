@@ -1,34 +1,39 @@
 import { useEffect, useState } from "react";
 
-function TodoList() {
-  const [titleAndBody, setTitleAndBody] = useState([]);
+function PostsFetchAsync() {
+  const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchTodos = async () => {
+    async function fetchPosts() {
       try {
-        const response = await fetch("https://jsonplaceholder.typicode.com/todos?_limit=5");
+        const response = await fetch(
+          "https://jsonplaceholder.typicode.com/posts?_limit=5"
+        );
         const data = await response.json();
-        setTodos(data);
+        setPosts(data);
+        setLoading(false);
       } catch (error) {
-        console.error("Error fetching todos:", error);
-      } finally {
+        console.error("Error fetching posts:", error);
         setLoading(false);
       }
-    };
+    }
 
-    fetchTodos();
+    fetchPosts();
   }, []);
- if (loading) return <p>Loading...</p>;
+
+  if (loading) return <p>Loading...</p>;
 
   return (
     <div>
-      <h2>Todo List</h2>
+      <h2>Posts (Async/Await)</h2>
       <ul>
-        {todos.map(todo => (
-          <li key={todo.id}>
-            <input type="checkbox" checked={todo.completed} readOnly />
-            {todo.title}
+        {posts.map((p) => (
+          <li key={p.id}>
+            <p>
+              <strong>{p.title}</strong> <br />
+              {p.body}
+            </p>
           </li>
         ))}
       </ul>
@@ -36,4 +41,4 @@ function TodoList() {
   );
 }
 
-export default TodoList;
+export default PostsFetchAsync;
